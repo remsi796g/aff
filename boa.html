@@ -1,209 +1,98 @@
-/* Reset some default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bank of America Customer Support">
+    <title>Bank of America - Customer Support</title>
+    <!-- Link to FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-/* Body and general layout */
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-}
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://www.bankofamerica.com/content/dam/bam/online/brand-logos/boalogo-header.svg" alt="Bank of America Logo">
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Accounts</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </nav>
+    </header>
 
-header {
-    background-color: #003b5c;
-    padding: 10px 0;
-}
+    <!-- Main Content Section -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Welcome to Bank of America Customer Support</h1>
+                <p>We are here to help you with your banking needs 24/7. Whether it's managing accounts, credit cards, or loans, we're just a call away!</p>
+            </div>
+            <img src="https://www.bankofamerica.com/content/dam/bam/online/brand-images/hero-image.jpg" alt="Customer support team" class="hero-image">
+        </section>
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
+        <!-- Topics Section -->
+        <section class="topics">
+            <h2>How Can We Help You?</h2>
+            <div class="topics-list">
+                <div class="topic">
+                    <i class="fas fa-user-circle"></i>
+                    <h3>Account Assistance</h3>
+                    <p>We can help you with opening or managing checking and savings accounts, account security, and more.</p>
+                </div>
+                <div class="topic">
+                    <i class="fas fa-credit-card"></i>
+                    <h3>Credit Cards</h3>
+                    <p>Get help with credit card payments, rewards points, credit limits, and general inquiries.</p>
+                </div>
+                <div class="topic">
+                    <i class="fas fa-home"></i>
+                    <h3>Loans and Mortgages</h3>
+                    <p>Our team is here to assist with home loans, auto loans, and personal loan inquiries.</p>
+                </div>
+                <div class="topic">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Online Banking Support</h3>
+                    <p>If you need help navigating our online or mobile banking platforms, we're here to assist you.</p>
+                </div>
+                <div class="topic">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Fraud and Security</h3>
+                    <p>If you suspect fraud or need assistance with locking your card, please reach out immediately.</p>
+                </div>
+                <div class="topic">
+                    <i class="fas fa-globe"></i>
+                    <h3>International Banking</h3>
+                    <p>Need help with currency exchange, international transfers, or services abroad? We can guide you.</p>
+                </div>
+            </div>
+        </section>
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
+        <!-- Call to Action Section -->
+        <section class="call-to-action">
+            <h2>Ready to Speak with Us?</h2>
+            <p>Our customer service representatives are available 24/7 to assist with any questions you may have. Please call us at:</p>
+            <h3>1-800-432-1000</h3>
+            <p>Or use our live chat feature for immediate assistance.</p>
+            <button onclick="window.location.href='https://www.bankofamerica.com/contactus/'">Start Chat</button>
+        </section>
+    </main>
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Bank of America. All Rights Reserved.</p>
+        <ul>
+            <li><a href="#">Privacy & Security</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Accessibility</a></li>
+        </ul>
+    </footer>
 
-nav a:hover {
-    text-decoration: underline;
-}
-
-.logo img {
-    width: 120px;
-}
-
-/* Hero Section */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px 20px;
-    background-color: #005082;
-    color: white;
-}
-
-.hero-text {
-    width: 60%;
-}
-
-.hero h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-.hero-image {
-    width: 40%;
-    border-radius: 10px;
-}
-
-/* Topics Section */
-.topics {
-    background-color: #fff;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.topics h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.topics-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.topic {
-    width: 30%;
-    background-color: #e7f2f8;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.topic img {
-    width: 80px;
-    margin-bottom: 15px;
-}
-
-.topic h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.topic p {
-    font-size: 16px;
-}
-
-/* Call to Action Section */
-.call-to-action {
-    background-color: #005082;
-    color: white;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.call-to-action h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-
-.call-to-action p {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.call-to-action h3 {
-    font-size: 26px;
-    margin-bottom: 20px;
-}
-
-.call-to-action button {
-    background-color: #003b5c;
-    color: white;
-    padding: 12px 25px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.call-to-action button:hover {
-    background-color: #004f7e;
-}
-
-/* Footer Section */
-footer {
-    background-color: #003b5c;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-
-footer p {
-    margin-bottom: 10px;
-}
-
-footer ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-footer ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-footer ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-image {
-        width: 80%;
-        margin-top: 20px;
-    }
-
-    .topics-list {
-        flex-direction: column;
-    }
-
-    .topic {
-        width: 80%;
-        margin: 20px auto;
-    }
-
-    .call-to-action button {
-        width: 100%;
-    }
-}
+</body>
+</html>
