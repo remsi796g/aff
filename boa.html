@@ -4,29 +4,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Bank of America</title>
+  <link rel="icon" href="Screenshot 2025-07-20 at 9.22.38 AM.png" type="image/png">
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    #scrollTopBtn {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+    #scrollTopBtn.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  </style>
+  <script>
+    window.addEventListener('scroll', function () {
+      const scrollBtn = document.getElementById('scrollTopBtn');
+      if (window.scrollY > 200) {
+        scrollBtn.classList.add('show');
+      } else {
+        scrollBtn.classList.remove('show');
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 </head>
 <body class="bg-gray-100 text-gray-900">
 
-  <!-- Header -->
-  <header class="bg-red-700 text-white p-4 text-center shadow-md">
-    <h1 class="text-2xl font-bold">Contact Bank of America</h1>
-    <p class="text-sm">We’re here to help – Call us anytime!</p>
+  <header class="bg-red-700 text-white p-4 text-center shadow-md sticky top-0 z-50 flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+      <img src="Screenshot 2025-07-20 at 9.22.38 AM.png" alt="BOA Logo" class="w-10 h-10">
+      <div>
+        <h1 class="text-2xl font-bold">Contact Bank of America</h1>
+        <p class="text-sm">We’re here to help – Call us anytime!</p>
+      </div>
+    </div>
+    <a href="tel:18004321000" class="bg-white text-red-700 font-bold px-4 py-2 rounded-full shadow hover:bg-gray-100 transition">📞 Call Now</a>
   </header>
 
-  <!-- Main Section -->
   <main class="max-w-3xl mx-auto p-6 space-y-6">
 
-    <!-- Call Support Section -->
     <section class="bg-white rounded-xl shadow p-6 text-center">
-      <img src="https://1000logos.net/wp-content/uploads/2017/06/Bank-of-America-Logo.png" 
-           alt="Bank of America" class="mx-auto w-40 mb-4">
+      <a href="tel:18004321000">
+        <img src="Screenshot 2025-07-20 at 9.22.38 AM.png" 
+             alt="Bank of America" class="mx-auto w-40 mb-4 hover:scale-105 transition-transform">
+      </a>
       <h2 class="text-xl font-semibold mb-2">Need Immediate Assistance?</h2>
       <p class="text-gray-700 mb-4">Our customer service team is available 24/7 to help you with your banking needs.</p>
       <a href="tel:18004321000" class="inline-block bg-red-600 text-white font-bold px-6 py-3 rounded-full shadow hover:bg-red-700 transition">📞 Call Now: 1-800-432-1000</a>
     </section>
 
-    <!-- Common Issues Section -->
     <section class="bg-white rounded-xl shadow p-6">
       <h2 class="text-lg font-semibold mb-3 text-red-700">Common Issues Customers Face</h2>
       <p class="text-gray-700 mb-3">At Bank of America, we understand that banking issues can be frustrating. Here are some common problems customers report:</p>
@@ -41,7 +71,6 @@
       <p class="mt-3 text-gray-700">If you are facing any of these issues, call us immediately for assistance.</p>
     </section>
 
-    <!-- Emergency Contact Section -->
     <section class="bg-white rounded-xl shadow p-6">
       <h2 class="text-lg font-semibold mb-3 text-red-700">Emergency Contact Numbers</h2>
       <ul class="space-y-3 text-gray-800">
@@ -51,17 +80,19 @@
       </ul>
     </section>
 
-    <!-- Image Encouraging Call -->
     <section class="bg-white rounded-xl shadow p-6 text-center">
-      <img src="https://1000logos.net/wp-content/uploads/2017/06/Bank-of-America-Logo.png" 
-           alt="Customer Support" class="mx-auto w-32 mb-4">
+      <a href="tel:18004321000">
+        <img src="Screenshot 2025-07-20 at 9.22.38 AM.png" 
+             alt="Customer Support" class="mx-auto w-32 mb-4 hover:scale-105 transition-transform">
+      </a>
       <p class="text-gray-700">Your financial security is our top priority. If you need help, call us immediately.</p>
     </section>
 
   </main>
 
-  <!-- Floating Call Now Button -->
   <a href="tel:18004321000" class="fixed bottom-4 right-4 bg-red-600 text-white font-bold px-5 py-3 rounded-full shadow-lg hover:bg-red-700 transition animate-bounce">📞 Call Now</a>
+
+  <button id="scrollTopBtn" onclick="scrollToTop()" class="fixed bottom-20 right-4 bg-gray-700 text-white font-bold px-4 py-2 rounded-full shadow hover:bg-gray-800">⬆ Top</button>
 
 </body>
 </html>
